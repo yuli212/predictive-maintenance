@@ -9,16 +9,15 @@ namespace Eloquent {
                     * Predict class for features vector
                     */
                     int predict(float *x) {
-                        float kernels[4] = { 0 };
+                        float kernels[3] = { 0 };
                         float decisions[1] = { 0 };
                         int votes[2] = { 0 };
-                        kernels[0] = compute_kernel(x,   -0.890162033108  , -0.849624306651 );
-                        kernels[1] = compute_kernel(x,   -0.860095834845  , -0.86539992482 );
+                        kernels[0] = compute_kernel(x,   -0.802718490979  , -0.910411635392 );
+                        kernels[1] = compute_kernel(x,   -0.095052141019  , 0.84198064657 );
                         kernels[2] = compute_kernel(x,   0.535418025898  , 0.086084757484 );
-                        kernels[3] = compute_kernel(x,   -0.7699012398  , 0.530747728757 );
-                        float decision = 0.623607956353;
-                        decision = decision - ( + kernels[0] * -1.0  + kernels[1] * -0.100167118252 );
-                        decision = decision - ( + kernels[2] * 0.266583509962  + kernels[3] * 0.83358360829 );
+                        float decision = 0.440162358708;
+                        decision = decision - ( + kernels[0] * -0.720676334493 );
+                        decision = decision - ( + kernels[1] * 0.067306008099  + kernels[2] * 0.653370326393 );
 
                         return decision > 0 ? 0 : 1;
                     }

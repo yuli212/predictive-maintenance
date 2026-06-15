@@ -1,7 +1,7 @@
 #include <Wire.h>
 #include <Adafruit_MPU6050.h>
 #include <Adafruit_Sensor.h>
-#include "SvmLinearModel.h"
+#include "SvmRbfModel.h"
 
 Adafruit_MPU6050 mpu;
 Eloquent::ML::Port::SVM clf;
