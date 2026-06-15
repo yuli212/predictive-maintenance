@@ -1,7 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "PowerShell(cd \"d:\\\\Semester 6\\\\pattern\\\\predictive-maintenance\"; $env:MPLBACKEND = \"Agg\"; python dummy_data.py)"
-    ]
-  }
-}
